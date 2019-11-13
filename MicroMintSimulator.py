@@ -37,7 +37,7 @@ def meanMint(u,k,c, iterations):
 
 
 def main(): 
-    print("Mean nbr of iterations: " + str(meanMint(16, 2, 1, 10000)))
+    print("Mean nbr of iterations: " + str(meanMint(20, 7, 1000, 100)))
     
 
 
