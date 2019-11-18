@@ -6,28 +6,35 @@ Created on 13 Nov 2019
 
 import hashlib
 
-
-
-def SPVNode (merkle):
-   b = bytearray.fromhex(merkle)
-   for a in b:
-       print(a)
-    
+def SPVNode (file):
+   b = readFile(file)
    
+   last_result = ""
+   for node in range(len(b)):
+       if node == 0:
+          last_result = b[node]
+       else:
+          pathindicator = (b[node][0])
+          concat = ""
+          if(pathindicator == 'L'):
+              concat = b[node].strip('L') + last_result
+          else:
+              concat = last_result + b[node].strip('R')
+          last_result = (hashlib.sha1(bytearray.fromhex(concat))).hexdigest()
    
-   ''' hashresult = ""
-    for index in range(len(merkle)): 
-        merkle[index+1] = merkle[index+1] + merkle[index]
-        hashlib.sha1(merkle[index + 1])
-    return merkle[index + 1]
-'''
+   print(last_result)
 
-def main ():
-    text = ""
-    file = open("merkle.txt") 
+
+def readFile(file):
+    list = []
+    file = open(file) 
     for x in file:
-        text = text + x
-    print(text)
+        x = x.strip('\n')
+        list.append(x)
+    return list
+
+def main():
+    SPVNode("merkle.txt")
 
 
 if __name__ == '__main__':
