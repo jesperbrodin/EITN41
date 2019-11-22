@@ -34,7 +34,7 @@ def readFile(file):
     return list
 
 def main():
-    SPVNode("merkle.txt")
+    SPVNode("merkle1.txt")
 
 
 if __name__ == '__main__':

@@ -1,21 +1,12 @@
-'''
-Created on 8 Nov 2019
 
-@author: williamrosenberg
-'''
+# Created on 8 Nov 2019
 
-
-'''
-Returns i if it fills the requirements for Luhns algorithm for String number. Otherwise returns empty String
+# @author: williamrosenberg & jesperbrodin
 
 
 
 
-
-'''
-
-
-
+# Returns i if it fills the requirements for Luhns algorithm for String number. Otherwise returns empty String
 
 
 def luhn(number, i):
@@ -37,10 +28,10 @@ def luhn(number, i):
         return i    
 
     return ""
-'''
-Runs luhns algorithm for a list of numbers. Tests values of X of 0-9, 
-returns a String of X values that fullfills Luhns algorithm.
-'''
+
+# Runs Luhns algorithm for a list of numbers. Tests values of X of 0-9, 
+# returns a String of X values that fullfills Luhns algorithm.
+
 def testluhn(numberlist):
     s = ""
     for number in numberlist:
@@ -48,24 +39,15 @@ def testluhn(numberlist):
         while(x < 10):
             s = s + str(luhn(number, x))
             x = x + 1
-                           
-            
     return s;
 
 def main():
     
-    textfile = open("realquiztestfile.txt")
+    textfile = open("testin.txt")
     splittextfile = (textfile.read().splitlines())
     
     print(testluhn(splittextfile))
     
     
-    
-           
-  
 if __name__== "__main__":
     main()
-
-
-
-

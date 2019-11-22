@@ -1,12 +1,18 @@
-'''
-Created on 11 Nov 2019
 
-@author: williamrosenberg
-'''
+# Created on 11 Nov 2019
+
+# @author: williamrosenberg & jesperbrodin
+
 from random import randint
 
 
 
+
+#  Takes the values
+#  u: number of bins = 2^u
+#  k: required amount of balls in a single bin to generate 1 coin 
+#  c number of coins to be generated
+#  returns the number of iterations (throws) required to generate c coins.
 
 def Mint(u, k, c):
     nbrOfBins = 2 ** u 
@@ -24,6 +30,8 @@ def Mint(u, k, c):
     return iterations
 
 
+# Calculates the mean value of iterations (throws) required to generate c coins 
+# returns the mean value.
 def meanMint(u,k,c, iterations):
     x = 0
     sum = 0
@@ -37,9 +45,8 @@ def meanMint(u,k,c, iterations):
 
 
 def main(): 
-    print("Mean nbr of iterations: " + str(meanMint(20, 7, 1000, 100)))
+    print("Mean nbr of iterations: " + str(meanMint(16, 2, 1, 10000)))
     
-
 
 if __name__ == '__main__':
     main()
