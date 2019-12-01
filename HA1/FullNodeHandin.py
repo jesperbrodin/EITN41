@@ -57,7 +57,7 @@ class MerkleTree:
 if __name__ == '__main__':
     
     # Enter chosen textfile as parameter into MerkleTree below
-    merkleTree = MerkleTree("testleaves79.txt")
+    merkleTree = MerkleTree("merkle2.txt")
     
     # Build the tree
     merkleTree.buildtree(merkleTree.leaves, merkleTree.pathParentIndex)

@@ -1,10 +1,12 @@
 '''
 Created on 13 Nov 2019
 
-@author: jesperbrodin
+@author: jesperbrodin & williamrosenberg
 '''
 
 import hashlib
+
+
 
 def SPVNode (file):
    b = readFile(file)
