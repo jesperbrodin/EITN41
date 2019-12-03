@@ -22,7 +22,7 @@ def split_list(a_list):
 
 def read_file():
     
-    testcap = open('cia.log.2.pcap', 'rb')
+    testcap = open('cia.pcap', 'rb')
     capfile = savefile.load_savefile(testcap, layers=2, verbose=True)
 
     # print the packets
@@ -141,9 +141,9 @@ if __name__ == '__main__':
     
     # Input data
     read_pcap = read_file()
-    nazir_ip = "245.221.13.37"
-    mix_ip = "15.24.22.93"
-    nbr_partners = 9
+    nazir_ip = "61.152.13.37"
+    mix_ip = "95.235.155.122"
+    nbr_partners = 8
     
     # Learning phase
     int_batches = sort_packets(read_pcap, nazir_ip)

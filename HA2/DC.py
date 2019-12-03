@@ -23,14 +23,6 @@ def diningc(abitu, abitb, bbita, bbitu, ubita, ubitb, payer):
     
     
     result = axor ^ bxor ^ uxor    
-    
-    if(result == 0):
-        print("Saul Berenson paid for your dinner")
-    
-    else:
-        
-        print("Abu Nazir bombed your dinner")
-
 
 
 def hex_to_binary(hexstring):
@@ -73,12 +65,12 @@ def dc(dining_data):
 
 if __name__ == '__main__':
     data_1 = {
-        "SA": "1AC6",
-        "SB": "48F0",
-        "DA": "08F2",
-        "DB": "5AC4",
-        "M": "3252",
-        "b": 1
+        "SA": "70A8",
+        "SB": "9483",
+        "DA": "C068",
+        "DB": "86B7",
+        "M": "6109",
+        "b": 0
 }
     print(dc(data_1))
     
