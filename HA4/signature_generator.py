@@ -1,7 +1,7 @@
 '''
 Created on 11 Dec 2019
 
-@author: williamrosenberg
+@author: williamrosenberg and jesperbrodin
 '''
 
 
