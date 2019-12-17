@@ -70,16 +70,16 @@ def OAEP_decode (EM):
     
 if __name__ == '__main__':
   
-    mgfSeed = "9b4bdfb2c796f1c16d0c0772a5848b67457e87891dbc8214"
-    maskLen = 21
+    mgfSeed = "d9918d2cd546940c8b3beccd09c5e1d58c72b4998c7f52a5f267"
+    maskLen = 26
 
-    M = "c107782954829b34dc531c14b40e9ea482578f988b719497aa0687"
+    M = "92801de381dc1d23c83fb42377e95270dc9e11da3348"
     seed = "1e652ec152d0bfcd65190ffc604c0933d0423381"
     
     
-    EM = "0063b462be5e84d382c86eb6725f70e59cd12c0060f9d3778a18b7aa067f90b2178406fa1e1bf77f03f86629dd5607d11b9961707736c2d16e7c668b367890bc6ef1745396404ba7832b1cdfb0388ef601947fc0aff1fd2dcd279dabde9b10bfc51efc06d40d25f96bd0f4c5d88f32c7d33dbc20f8a528b77f0c16a7b4dcdd8f"
+    EM = "00581bc2381cf79218566065eb1def452262df368e129de319b5c2bb66e84df6be244fc653a9468c6aafbe715fe366526e9596c452cdf7a42ddcec8d8005724dc7d9450b769aa0fe6f58e8949e503294de3106a7a3b0254eac2b94d245421e610ca70466137c29e7ff5ccd41dda83a44457ea3c820d0f360599833d34ec82e3b"
   
-    print("MGF1 output: " + MGF1("9b4bdfb2c796f1c16d0c0772a5848b67457e87891dbc8214", 21))
+    print("MGF1 output: " + MGF1(mgfSeed, maskLen))
     print("<==============================================================>")
     print("OAEP encode output: " + OAEP_encode(M, seed)) 
     print("<==============================================================>")
